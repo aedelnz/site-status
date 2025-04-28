@@ -1,8 +1,7 @@
-# uptime-status
+# site-status
 
 一个基于 UptimeRobot API 的在线状态面板
 
-<img width="1152" alt="image" src="https://user-images.githubusercontent.com/25887822/178935137-6d23521d-5894-4fb8-922d-3575be4f7abc.png">
 
 ## 事先准备
 
