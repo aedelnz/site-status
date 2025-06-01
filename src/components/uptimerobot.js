@@ -12,7 +12,7 @@ function UptimeRobot({ apikey }) {
     unknow: '未知'
   };
 
-  const { CountDays, ShowLink } = window.Config;
+  const { CountDays } = window.Config;
 
   const [monitors, setMonitors] = useState();
 
@@ -23,8 +23,7 @@ function UptimeRobot({ apikey }) {
   if (monitors) return monitors.map((site) => (
     <div key={site.id} className='site'>
       <div className='meta'>
-        <span className='name' dangerouslySetInnerHTML={{ __html: site.name }} />
-        {ShowLink && <Link className='link' to={site.url} text={site.name} />}
+        <Link className='link' to={site.url} text={site.name} />
         <span className={'status ' + site.status}>{status[site.status]}</span>
       </div>
       <div className='timeline'>

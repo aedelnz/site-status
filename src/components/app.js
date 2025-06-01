@@ -23,8 +23,8 @@ function App() {
           ))}
         </div>
         <div id='footer'>
-          <p>基于 <Link to='https://uptimerobot.com/' text='UptimeRobot' /> 接口制作，检测频率 5 分钟</p>
-          <p>&copy; 2020 <Link to='https://starts.jixiejidiguan.eu.org' text='starts.jixiejidiguan.eu.org' />, Version {Package.version}</p>
+          <p>基于 <Link to='https://uptimerobot.com/' text='UptimeRobot' /> 接口制作，检测频率 5 分钟，Version {Package.version}</p>
+          <p>Copyright © 2020 - 2025 <Link to="https://jixiejidiguan.top" text="画的个人记录"/>. All Rights Reserved.</p>
         </div>
       </div>
     </>

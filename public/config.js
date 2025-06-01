@@ -12,14 +12,15 @@ window.Config = {
   // 日志天数
   CountDays: 30,
 
-  // 是否显示检测站点的链接
-  ShowLink: true,
-
   // 导航栏菜单
   Navi: [
     {
       text: '主页',
-      url: 'https://jixiejidiguan.top/'
-    }
+      url: 'https://jixiejidiguan.top'
+    },{
+      text: '原页',
+      url: 'https://stats.uptimerobot.com/0M2zqUkp83'
+    },
+
   ],
 };
