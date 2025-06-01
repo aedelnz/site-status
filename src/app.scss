@@ -21,7 +21,7 @@ a {
 #app {
   .container {
     width: 100%;
-    max-width: 980px;
+    max-width: 720px;
     margin: 0 auto;
   }
 }
@@ -40,7 +40,6 @@ a {
   padding: 0 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .8);
   z-index: 1000; /* 确保在其他内容之上 */
-
   .container {
     display: flex;
     align-items: baseline;
@@ -49,18 +48,21 @@ a {
   .logo {
     font-size: 24px;
     font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
   }
   .navi {
     font-size: 14px;
-    color: #ffffff;
-    a {
-      margin-left: 20px;
-      transition: color ease 150ms;
-    }
-    a:hover {
-      color: $primary-color;
-    }
+      a {
+        margin-left: 0.6rem;
+        transition: color ease 150ms;
   }
+  a:hover {
+    color: $primary-color;
+  }
+}
+
 }
 
 #uptime {
