@@ -54,15 +54,14 @@ a {
   }
   .navi {
     font-size: 14px;
-      a {
-        margin-left: 0.6rem;
-        transition: color ease 150ms;
+    a {
+      margin-left: 0.6rem;
+      transition: color ease 150ms;
+    }
+    a:hover {
+      color: $primary-color;
+    }
   }
-  a:hover {
-    color: $primary-color;
-  }
-}
-
 }
 
 #uptime {
