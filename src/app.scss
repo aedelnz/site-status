@@ -12,6 +12,12 @@ body {
   line-height: 1;
   color: #131a26;
 }
+body {
+  background-image: url('0.jpg');
+  background-position: center; /* 居中 */
+  background-repeat: no-repeat; /* 不重复 */
+  background-size: cover; /* 覆盖整个区域 */
+}
 
 a {
   text-decoration: none;
