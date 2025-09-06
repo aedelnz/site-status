@@ -13,7 +13,7 @@ window.Config = {
     {
       text: '主页',
       url: 'https://jixiejidiguan.top'
-    },{
+    }, {
       text: '原页',
       url: 'https://stats.uptimerobot.com/0M2zqUkp83'
     }
