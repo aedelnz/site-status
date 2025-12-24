@@ -1,7 +1,7 @@
 window.Config = {
 
   // 显示标题
-  SiteName: '状态仪表盘',
+  SiteName: 'HP 状态仪表盘',
 
   // UptimeRobot Api Keys
   // 支持 Monitor-Specific 和 Read-Only
