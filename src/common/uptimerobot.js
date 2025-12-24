@@ -6,26 +6,15 @@ export async function GetMonitors(apikey, days) {
 
   const dates = [];
   const today = dayjs(new Date().setHours(0, 0, 0, 0));
-  for (let d = 0; d < days; d++) {
-    dates.push(today.subtract(d, 'day'));
-  }
+  for (let d = 0; d < days; d++) { dates.push(today.subtract(d, 'day')) }
 
   const ranges = dates.map((date) => `${date.unix()}_${date.add(1, 'day').unix()}`);
   const start = dates[dates.length - 1].unix();
   const end = dates[0].add(1, 'day').unix();
   ranges.push(`${start}_${end}`);
 
-  const postdata = {
-    api_key: apikey,
-    format: 'json',
-    logs: 1,
-    log_types: '1-2',
-    logs_start_date: start,
-    logs_end_date: end,
-    custom_uptime_ranges: ranges.join('-'),
-  };
-
-  const response = await axios.post('https://cors.status.org.cn/uptimerobot/v2/getMonitors', postdata, { timeout: 10000 });
+  const postdata = { api_key: apikey, format: 'json', logs: 1, log_types: '1-2', logs_start_date: start, logs_end_date: end, custom_uptime_ranges: ranges.join('-'), };
+  const response = await axios.post('https://api.uptimerobot.com/v2/getMonitors', postdata, { timeout: 10000 });
   if (response.data.stat !== 'ok') throw response.data.error;
   return response.data.monitors.map((monitor) => {
 

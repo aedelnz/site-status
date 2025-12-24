@@ -4,7 +4,7 @@ import { GetMonitors } from '../common/uptimerobot';
 import { formatDuration, formatNumber } from '../common/helper';
 import Link from './link';
 
-function UptimeRobot({ apikey }) {
+function UptimeRobot({ apikey, onUpdate }) {
 
   const status = {
     ok: '正常',
@@ -17,8 +17,13 @@ function UptimeRobot({ apikey }) {
   const [monitors, setMonitors] = useState();
 
   useEffect(() => {
-    GetMonitors(apikey, CountDays).then(setMonitors);
-  }, [apikey, CountDays]);
+    GetMonitors(apikey, CountDays).then((data) => {
+      setMonitors(data);
+      if (onUpdate) {
+        onUpdate(data);
+      }
+    });
+  }, [apikey, CountDays, onUpdate]);
 
   if (monitors) return monitors.map((site) => (
     <div key={site.id} className='site'>
